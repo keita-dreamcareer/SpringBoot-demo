@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ヤッホーー</title>
+</head>
+<body>
+	<h1 th:text="|名前：${name}|"></h1>
+	<h2 th:text="${greet}"></h2>
+	<p th:text="${task}"></p>
+	
+	<div th:object="${person}">
+		<h1 th:text="'名前は' + *{name} + 'です'"></h1>
+		<h1 th:text="|年齢は*{age}才です|"></h1>
+	</div>
+	
+	<h1 th:text="'名前は' + ${person.name} + 'です'"></h1>
+	<h1 th:text="|年齢は${person.age}才です|"></h1>
+	<a th:href="@{/test}">テスト</a>
+</body>
+</html>
